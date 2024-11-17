@@ -38,8 +38,7 @@ for month in range(1, 13): # for each month folder
     if (month in [1, 4, 7, 12]): # get the max csv index
         maxind = 5 
     
-    open(OUT, 'w', encoding='utf-8').close() # erase file berfore writing
-    with open(OUT, 'a', encoding='utf-8', newline='') as outFile:
+    with open(OUT, 'w', encoding='utf-8', newline='') as outFile:
         outFileWriter = csv.writer(outFile, delimiter=';')
         outFileWriter.writerow(['post', 'title', 'tags']) # write header
     
