@@ -23,8 +23,7 @@ def myFilter(IN, OUT):
     
     count = 0
     
-    open(OUT, 'w', encoding='utf-8').close()
-    with open(IN, 'r', encoding='utf-8') as inFile, open(OUT, 'a', encoding='utf-8', newline='') as outFile:
+    with open(IN, 'r', encoding='utf-8') as inFile, open(OUT, 'w', encoding='utf-8', newline='') as outFile:
         
         reader = csv.reader(inFile, delimiter=';')
         next(reader) # skip header
