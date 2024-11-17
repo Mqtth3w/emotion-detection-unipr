@@ -188,9 +188,7 @@ for month in range(1, 13): # for each month folder
     IN = PATH + str(month) + '\\cleanPosts.csv' # complete input path
     OUT = PATH + str(month) + '\\labelPosts.csv' # complete output path
     
-    
-    open(OUT, 'w', encoding='utf-8').close() # overwrite files with emptyness
-    with open(IN, 'r', encoding='utf-8') as inFile, open(OUT, 'a', encoding='utf-8', newline='') as outFile:
+    with open(IN, 'r', encoding='utf-8') as inFile, open(OUT, 'w', encoding='utf-8', newline='') as outFile:
         
         inReader = csv.reader(inFile, delimiter=';')
         next(inReader) # skip header
