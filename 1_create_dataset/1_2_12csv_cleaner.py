@@ -34,8 +34,7 @@ for month in range(1, 13):
     IN = PATH + str(month) + '\\almostCleanPosts.csv' # complete input path
     OUT = PATH + str(month) + '\\cleanPosts.csv' # complete output path
     
-    open(OUT, 'w', encoding='utf-8').close() # erase file berfore writing
-    with open(IN, 'r', encoding='utf-8') as inFile, open(OUT, 'a', encoding='utf-8', newline='') as outFile:
+    with open(IN, 'r', encoding='utf-8') as inFile, open(OUT, 'w', encoding='utf-8', newline='') as outFile:
         inFileReader = csv.reader(inFile, delimiter=';')
         next(inFileReader) # skip header row (post;title;tags)
         outFileWriter = csv.writer(outFile, delimiter=';')
