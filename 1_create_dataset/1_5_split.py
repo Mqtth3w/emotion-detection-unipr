@@ -49,8 +49,7 @@ for month in range(1, 13):
     val_set.extend(val20) 
     
     # write test20 data
-    open(OUT_TEST, 'w', encoding='utf-8').close() # erase file berfore writing
-    with open(OUT_TEST, 'a', encoding='utf-8', newline='') as outTestFile:
+    with open(OUT_TEST, 'w', encoding='utf-8', newline='') as outTestFile:
         
         outTestFileWriter = csv.writer(outTestFile, delimiter=';')
         outTestFileWriter.writerow(header)
