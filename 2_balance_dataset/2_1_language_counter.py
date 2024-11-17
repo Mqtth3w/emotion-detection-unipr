@@ -24,8 +24,7 @@ header = ['month','javascript','html','css','sql','python','typescript','java','
              'solidity','lisp','f#','fortran','erlang','apl','cobol','sas','ocaml','crystal','total']
 
 
-open(STATS, 'w', encoding='utf-8').close()
-with open(STATS, 'a', encoding='utf-8', newline='') as outFile:
+with open(STATS, 'w', encoding='utf-8', newline='') as outFile:
     
     writer = csv.writer(outFile, delimiter=';')
     writer.writerow(header)
