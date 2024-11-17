@@ -9,8 +9,7 @@ LANGUAGES = ['javascript','html','css','sql','python','typescript','java','bash'
              'solidity','lisp','f#','fortran','erlang','apl','cobol','sas','ocaml','crystal']
 
 
-open(STATS, mode='w', encoding='utf-8').close()
-with open(STATS, mode='a', encoding='utf-8', newline='') as outFile:
+with open(STATS, mode='w', encoding='utf-8', newline='') as outFile:
     
     writer = csv.writer(outFile, delimiter=';')
     writer.writerow(['language','month','total','positive total','negative total','neutral','joy','love',
